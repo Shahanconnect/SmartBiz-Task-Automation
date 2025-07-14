@@ -53,8 +53,8 @@ SmartBiz/
 
 ```bash
 # Clone the repository
-git clone https://github.com/shahanconnect/Smartbiz.git
-cd Smartbiz
+git clone https://github.com/shahanconnect/SmartBiz-Task-Automation.git
+cd SmartBiz-Task-Automation
 
 # Create virtual environment
 python -m venv venv
@@ -78,56 +78,56 @@ python run.py
 
 ### 🔹 Homepage
 
-![Homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
-![Homepage 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage2.png)
+![Homepage](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/homepage.png)
+![Homepage 2](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/homepage2.png)
 
 ### 🔹 Signup & Login
 
-![Signup](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/signup.png)
-![Login](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/login.png)
+![Signup](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/signup.png)
+![Login](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/login.png)
 
 ### 🔹 User Dashboard
 
-![User Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user.png)
-![User Dashboard 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/dashboard.png)
+![User Dashboard](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/user.png)
+![User Dashboard 2](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/dashboard.png)
 
 ### 🔹 Admin Dashboard
 
-![Admin Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png)
+![Admin Dashboard](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/admin-dashboard.png)
 
 ### 🔹 User Profile
 
-![User Profile](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-profile.png)
+![User Profile](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/user-profile.png)
 
 ### 🔹 Product Description Generator
 
-![Description](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/description.png)
+![Description](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/description.png)
 
 ### 🔹 Invoice Generator
 
-![Invoice](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice.png)
-![Invoice 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice2.png)
+![Invoice](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/invoice.png)
+![Invoice 2](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/invoice2.png)
 
 ### 🔹 E-commerce Scraper
 
-![Scraper](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper.png)
-![Scraper 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper2.png)
+![Scraper](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/scraper.png)
+![Scraper 2](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/scraper2.png)
 
 ### 🔹 Price Alert Notifier
 
-![Price Alert](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/price-alert.png)
+![Price Alert](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/price-alert.png)
 
 ### 🔹 Service Management
 
-![Service Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/service-management.png)
+![Service Management](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/service-management.png)
 
 ### 🔹 System Controller
 
-![System Controller](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/system-controller.png)
+![System Controller](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/system-controller.png)
 
 ### 🔹 User Management
 
-![User Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-management.png)
+![User Management](https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/user-management.png)
 
 ---
 
