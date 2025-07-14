@@ -78,56 +78,37 @@ python run.py
 
 ### 🔹 Homepage
 
-![Homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
-![Homepage 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage2.png)
+&#x20;
 
 ### 🔹 Signup & Login
 
-![Signup](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/signup.png)
-![Login](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/login.png)
+&#x20;
 
 ### 🔹 User Dashboard
 
-![User Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user.png)
-![User Dashboard 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/dashboard.png)
+&#x20;
 
 ### 🔹 Admin Dashboard
 
-![Admin Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png)
-
 ### 🔹 User Profile
-
-![User Profile](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-profile.png)
 
 ### 🔹 Product Description Generator
 
-![Description](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/description.png)
-
 ### 🔹 Invoice Generator
 
-![Invoice](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice.png)
-![Invoice 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice2.png)
+&#x20;
 
 ### 🔹 E-commerce Scraper
 
-![Scraper](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper.png)
-![Scraper 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper2.png)
+&#x20;
 
 ### 🔹 Price Alert Notifier
 
-![Price Alert](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/price-alert.png)
-
 ### 🔹 Service Management
-
-![Service Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/service-management.png)
 
 ### 🔹 System Controller
 
-![System Controller](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/system-controller.png)
-
 ### 🔹 User Management
-
-![User Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-management.png)
 
 ---
 
@@ -140,16 +121,26 @@ GitHub: [@shahanconnect](https://github.com/shahanconnect)
 
 ## 📄 License
 
-This project is open-source. To add a license:
+```
+Copyright (c) 2025 Shahan Ahmad
 
-```bash
-touch LICENSE
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
-Choose one of the following:
-
-* [MIT License](https://choosealicense.com/licenses/mit/)
-* [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
-* [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
-
-Paste the license text inside the LICENSE file and commit it to the repository.
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
