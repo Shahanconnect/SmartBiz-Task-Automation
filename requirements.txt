@@ -8,9 +8,7 @@ cryptography
 email_validator
 Flask-Migrate
 pyautogui
-ollama
 schedule
 secure-smtplib
 Flask-Mail
 selenium
-APScheduler
