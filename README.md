@@ -88,6 +88,9 @@ GitHub: @shahanconnect
 
 
 ## 📸 Screenshots
+![image alt](https://github.com/Shahanconnect/SmartBiz-Task-Automation/blob/4ec7cf6341adc6abb6b60f41c3435d97685f56d0/app/screenshots/admin-dashboard.png)
+
+https://github.com/Shahanconnect/SmartBiz-Task-Automation/blob/4ec7cf6341adc6abb6b60f41c3435d97685f56d0/app/screenshots/admin-dashboard.png
 
 ### 🔹 Homepage
 ![homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
