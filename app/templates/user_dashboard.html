@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="dashboard-wrapper-modern">
+
+  <!-- Sidebar -->
+  <aside class="sidebar-modern">
+    <div class="logo">SmartBiz</div>
+    <nav class="nav-links">
+      <a href="{{ url_for('user_dashboard') }}" class="{% if request.path == '/user-dashboard' %}active{% endif %}">
+        <i class="bi bi-house-door-fill"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="{{ url_for('user_profile') }}" class="{% if request.path == '/user-dashboard/profile' %}active{% endif %}">
+        <i class="bi bi-person-fill"></i>
+        <span>Profile</span>
+      </a>
+      <a href="{{ url_for('logout') }}">
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+  
+
+  <!-- Main Content -->
+  <main class="main-modern">
+    <header class="header-modern">
+      <h2>Welcome, {{ current_user.username }}</h2>
+    </header>
+
+    <section class="modules-grid-modern">
+
+      <a href="{{ url_for('product_description') }}" class="module-modern glass-card gradient-blue">
+        <i class="bi bi-pencil-square icon"></i>
+        <span>Product Descriptions</span>
+      </a>
+
+      <a href="{{ url_for('scrape') }}" class="module-modern glass-card gradient-green">
+        <i class="bi bi-search icon"></i>
+        <span>Web Scraper</span>
+      </a>
+
+      <a href="{{ url_for('price_alert') }}" class="module-modern glass-card gradient-yellow">
+        <i class="bi bi-bell-fill icon"></i>
+        <span>Price Alerts</span>
+      </a>
+
+
+      <a href="{{ url_for('invoice_form') }}" class="module-modern glass-card gradient-green">
+        <i class="bi bi-receipt icon"></i>
+        <span>Invoice Generator</span>
+      </a>
+      
+      
+
+
+
+      <a href="{{ url_for('task_automator') }}" class="module-modern glass-card gradient-dark">
+        <i class="bi bi-lightning-fill icon"></i>
+        <span>System Controller</span>
+      </a>
+
+    </section>
+  </main>
+</div>
+{% endblock %}

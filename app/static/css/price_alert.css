@@ -1,0 +1,220 @@
+/* === Base Page === */
+body {
+  background: linear-gradient(to top right, #f5eaff, #f0f4ff);
+  font-family: 'Inter', 'Poppins', sans-serif;
+  overflow-x: hidden;
+  color: #2e2e2e;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  animation: fadeSlideIn 0.7s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Sidebar === */
+.alerts-sidebar {
+  flex: 1;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(117, 64, 238, 0.08);
+  position: relative;
+}
+
+.alerts-sidebar h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7b3eff;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, #fdfdfd, #f2f2ff);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  z-index: 5;
+  border-bottom: 1px solid #e0d7ff;
+}
+
+.alerts-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.alerts-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.alerts-scroll::-webkit-scrollbar-thumb {
+  background: #b38bff;
+  border-radius: 8px;
+}
+.alerts-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* === Alert Card === */
+.alert-card {
+  position: relative;
+  background: #fff;
+  border-left: 6px solid #a76bff;
+  padding: 1rem 1rem 1.2rem;
+  border-radius: 16px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 10px 30px rgba(160, 100, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.alert-card:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 0 15px 40px rgba(138, 79, 255, 0.2);
+}
+
+.alert-card h5 {
+  font-size: 1.1rem;
+  color: #6f42c1;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin: 4px 6px 0 0;
+  font-weight: 500;
+}
+
+.badge-price {
+  background: linear-gradient(to right, #ff99cc, #ff66cc);
+  color: white;
+}
+
+.badge-email {
+  background: linear-gradient(to right, #91a7ff, #7b3eff);
+  color: white;
+}
+
+/* === Delete Button === */
+.alert-card .btn-danger {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  border-radius: 12px;
+  background-color: #ff4b5c;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.alert-card .btn-danger:hover {
+  background-color: #e03648;
+}
+
+/* === Delete All Button === */
+.delete-all {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-delete-all {
+  background: linear-gradient(45deg, #ff4b7d, #ff6fb3);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-delete-all:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 75, 125, 0.25);
+}
+
+/* === Form === */
+.price-alert-form {
+  flex: 2;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
+}
+
+.price-alert-form h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #7b3eff;
+  margin-bottom: 2rem;
+}
+
+.price-alert-form .form-label {
+  font-weight: 600;
+  color: #444;
+}
+
+.price-alert-form .form-control {
+  border-radius: 14px;
+  padding: 12px;
+  background-color: #f8f8ff;
+  border: 1px solid #ddd;
+  transition: all 0.25s ease;
+}
+
+.price-alert-form .form-control:focus {
+  border-color: #9a5df0;
+  box-shadow: 0 0 0 4px rgba(155, 93, 240, 0.1);
+}
+
+.price-alert-form .btn-primary {
+  background: linear-gradient(135deg, #7741ea, #b377ff);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(150, 90, 250, 0.2);
+}
+
+.price-alert-form .btn-primary:hover {
+  background: linear-gradient(135deg, #6c30e5, #9f63ff);
+  transform: translateY(-1px);
+}
+
+/* === Floating Add Button (Mobile) === */
+@media (max-width: 768px) {
+  .price-alert-form {
+    padding-bottom: 5rem;
+  }
+
+  .btn-primary {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border-radius: 50px;
+    padding: 14px 20px;
+    box-shadow: 0 8px 22px rgba(135, 80, 250, 0.3);
+  }
+}

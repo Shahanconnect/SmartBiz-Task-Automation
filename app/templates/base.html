@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SmartBiz - Business Automation made simple. Streamline your workflow, automate tasks, and grow your business with AI-powered tools.">
+    <meta property="og:title" content="SmartBiz - Business Automation">
+    <meta property="og:description" content="Streamline your workflow, automate tasks, and grow your business with AI-powered tools.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/preview.png') }}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="{{ request.url }}">
+  
+    <title>SmartBiz - Business Automation</title>
+  
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+    <!-- Base Style -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  
+    <!-- Route-Specific CSS -->
+    {% if request and request.path == '/login' %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    {% endif %}
+
+
+    {% if request and request.path == '/scrape' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scraper.css') }}">
+    {% endif %}
+  
+    {% if request and request.path == '/signup' %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+    {% endif %}
+  
+    {% if request and 'task-automator' in request.path %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/task_automator.css') }}">
+    {% endif %}
+  
+    {% if request and 'price-alert' in request.path %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/price_alert.css') }}">
+    {% endif %}
+  
+    {% if request and 'product-description' in request.path %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/product_description.css') }}">
+    {% endif %}
+  
+    {% if request and 'user-dashboard/profile' in request.path %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/user_profile.css') }}">
+    {% endif %}
+  
+    {% if request and 'user-dashboard' in request.path %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/user_dashboard.css') }}">
+    {% endif %}
+
+    {% if request and request.path == '/forgot-password' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forgot_password.css') }}">
+    {% endif %}
+
+    {% if request and request.path == '/data-organizer' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/data_organizer.css') }}">
+    {% endif %}
+    {% if request.path == '/invoice-form' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/invoice.css') }}">
+    {% endif %}
+    
+    
+    {% if request and request.path == '/admin/dashboard' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dashboard.css') }}">
+    {% endif %}
+
+    {% if request and request.path == '/admin/user-management' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_management.css') }}">
+    {% endif %}
+  
+    {% if request.path == '/admin/services' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_service.css') }}">
+    {% endif %}
+
+
+
+    
+
+
+
+  
+    {% block styles %}{% endblock %}
+  </head>
+  
+<!-- Flex container to manage layout -->
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">SmartBiz</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a href="{{ url_for('admin_dashboard') if current_user.email == 'testsmartbiz@gmail.com' else url_for('user_dashboard') }}"
+               class="nav-link {% if request.path == '/admin' or request.path == '/user-dashboard' %}active{% endif %}">
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a href="{{ url_for('login') }}" class="nav-link {% if request.path == '/login' %}active{% endif %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url_for('signup') }}" class="nav-link {% if request.path == '/signup' %}active{% endif %}">Sign Up</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Flash Alerts -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="container mt-3">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show animate__animated animate__fadeInDown" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+<!-- Main content will grow to fill available space -->
+<main class="flex-grow-1">
+  {% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer-logo fw-bold mb-2">SmartBiz</div>
+        <p>Automation made simple for your business success.</p>
+      </div>
+      <div class="col-md-4 footer-links">
+        <h5>Quick Links</h5>
+        <a href="/" class="d-block text-white-50">Home</a>
+        <a href="/login" class="d-block text-white-50">Login</a>
+        <a href="/signup" class="d-block text-white-50">Sign Up</a>
+        <a href="/dashboard" class="d-block text-white-50">Dashboard</a>
+      </div>
+      <div class="col-md-4 footer-contact">
+        <h5>Contact</h5>
+        <p>Email: <a href="mailto:testsmartbiz@gmail.com" class="text-white-50">support@smartbiz.com</a></p>
+        <p>Phone: <a href="tel:+1234567890" class="text-white-50">+1 234 567 890</a></p>
+        <div class="social-icons mt-2">
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center mt-4 text-white-50">
+      &copy; 2025 SmartBiz. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+<!-- Global Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+  function downloadPDF() {
+    const element = document.getElementById('pdf-content');
+    if (!element) {
+      alert("PDF content not found!");
+      return;
+    }
+    html2pdf().from(element).save();
+  }
+</script>
+
+<!-- Page-specific script hook -->
+{% block scripts %}{% endblock %}
+</body>
+
+
+
+
+</body>
+</html>

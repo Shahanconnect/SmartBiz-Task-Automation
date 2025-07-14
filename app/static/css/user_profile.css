@@ -1,0 +1,51 @@
+body {
+    background: linear-gradient(135deg, #d3cce3, #e9e4f0);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .profile-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  h2 {
+    font-weight: 600;
+    color: #4b0082;
+  }
+  
+  .form-floating .form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    transition: border 0.3s ease;
+  }
+  
+  .form-floating .form-control:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.25);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(90deg, #8e44ad, #9b59b6);
+    border: none;
+    border-radius: 30px;
+    padding: 0.6rem 2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    transform: translateY(-2px);
+  }
+  

@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+/* === Sidebar Modern Styling === */
+.sidebar-modern {
+  width: 240px;
+  background: linear-gradient(180deg, #1f2a40, #1a1d29);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  transition: width 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.sidebar-modern .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* === Nav Links === */
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: #cfd8dc;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* === Icon Styling === */
+.nav-links i {
+  font-size: 1.3rem;
+}
+
+/* === Responsive Collapse (Optional) === */
+@media (max-width: 768px) {
+  .sidebar-modern {
+    width: 60px;
+    padding: 1rem 0.5rem;
+  }
+
+  .sidebar-modern .logo {
+    display: none;
+  }
+
+  .nav-links a span {
+    display: none;
+  }
+
+  .nav-links a {
+    justify-content: center;
+    padding: 0.6rem;
+  }
+
+  .nav-links i {
+    font-size: 1.2rem;
+  }
+}
+
+  
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ffc107;
+  }
+  
+  .footer-contact .social-icons a {
+    color: #6c757d;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-contact .social-icons a:hover {
+    color: #ffc107;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+  }
+  
+  /* Hero Section */
+  .bg-gradient-primary {
+    background: linear-gradient(90deg, #007bff, #6610f2);
+  }
+  
+  /* Features Section */
+  .feature-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-body i {
+    color: #6c757d;
+  }
+  
+  /* About SmartBiz Section */
+  .bg-gradient-secondary {
+    background: linear-gradient(90deg, #6c757d, #343a40);
+  }

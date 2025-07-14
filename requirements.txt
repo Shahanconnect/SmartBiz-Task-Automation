@@ -1,0 +1,16 @@
+flask
+Flask-SQLAlchemy
+pymysql
+ollama
+requests
+beautifulsoup4
+cryptography
+email_validator
+Flask-Migrate
+pyautogui
+ollama
+schedule
+secure-smtplib
+Flask-Mail
+selenium
+APScheduler

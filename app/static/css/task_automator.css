@@ -1,0 +1,38 @@
+/* task-automator.css */
+body {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .card {
+    max-width: 700px;
+    margin: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  h2 {
+    font-weight: 700;
+    color: #343a40;
+  }
+  
+  label {
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Invoice Preview - SmartBiz{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/invoice.css') }}">
+<style>
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    .print-area, .print-area * {
+      visibility: visible;
+    }
+    .print-area {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    .no-print {
+      display: none !important;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5 fade-in">
+  <div class="print-area">
+    <div class="card shadow border-0 rounded-4 p-4 mx-auto" style="max-width: 900px;">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary">🧾 Invoice</h2>
+        <div class="text-end">
+          <p class="mb-1"><strong>Invoice No:</strong> {{ invoice_number }}</p>
+          <p class="mb-0"><strong>Date:</strong> {{ invoice_date }}</p>
+        </div>
+      </div>
+
+      <!-- Company & Client Info -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h6 class="fw-bold">From</h6>
+          <p class="mb-1">{{ company_name }}</p>
+          <p class="mb-0">{{ company_email }}</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <h6 class="fw-bold">To</h6>
+          <p class="mb-1">{{ client_name }}</p>
+          <p class="mb-0">{{ client_email }}</p>
+        </div>
+      </div>
+
+      <!-- Invoice Table -->
+      <div class="table-responsive mb-4">
+        <table class="table table-bordered align-middle text-center">
+          <thead class="table-light">
+            <tr>
+              <th>Item Description</th>
+              <th>Quantity</th>
+              <th>Unit Price (₹)</th>
+              <th>Total (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in items %}
+            <tr>
+              <td>{{ item.description }}</td>
+              <td>{{ item.qty }}</td>
+              <td>{{ "%.2f"|format(item.price) }}</td>
+              <td>{{ "%.2f"|format(item.qty * item.price) }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Totals -->
+      <div class="text-end">
+
+
+        <h5 class="fw-bold">Grand Total: ₹{{ "%.2f"|format(total_amount) }}</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actions (Hidden on Print) -->
+  <div class="text-center mt-4 no-print">
+    <a href="{{ url_for('invoice_form') }}" class="btn btn-outline-secondary me-2">⬅️ Back to Edit</a>
+    <button onclick="window.print()" class="btn btn-primary">🖨️ Print Invoice</button>
+  </div>
+</div>
+{% endblock %}

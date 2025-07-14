@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/task-automator.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5 fade-in">
+  <div class="card">
+    <h2 class="mb-4 text-center">System Controller</h2>
+    
+    <form method="POST" action="{{ url_for('task_automator') }}">
+      {{ form.hidden_tag() }}  <!-- CSRF Token -->
+
+      <div class="mb-3">
+        {{ form.task.label(class="form-label") }}
+        {{ form.task(class="form-select", id="task", onchange="toggleFields()") }}
+      </div>
+
+      <div id="web-url-field" class="mb-3 d-none">
+        {{ form.url.label(class="form-label") }}
+        {{ form.url(class="form-control", placeholder="https://example.com") }}
+      </div>
+
+      <div id="email-fields" class="d-none">
+        <div class="mb-3">
+          {{ form.recipient.label(class="form-label") }}
+          {{ form.recipient(class="form-control", placeholder="recipient@example.com") }}
+        </div>
+        <div class="mb-3">
+          {{ form.subject.label(class="form-label") }}
+          {{ form.subject(class="form-control") }}
+        </div>
+        <div class="mb-3">
+          {{ form.message.label(class="form-label") }}
+          {{ form.message(class="form-control", rows="4") }}
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        {{ form.submit(class="btn btn-success") }}
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  function toggleFields() {
+    const task = document.getElementById('task').value;
+    document.getElementById('web-url-field').classList.toggle('d-none', task !== 'webpage');
+    document.getElementById('email-fields').classList.toggle('d-none', task !== 'email');
+  }
+</script>
+{% endblock %}

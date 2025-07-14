@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block title %}SmartBiz | Scraper{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/scrape.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4 text-center text-primary fw-bold">Dynamic Web Scraper</h2>
+
+  {% if data %}
+  <!-- Scrape More Button (at top if data is shown) -->
+  <div class="text-end mb-3">
+    <a href="{{ url_for('scrape') }}" class="btn btn-outline-success">🔄 Scrape More</a>
+  </div>
+  {% endif %}
+
+  {% if not data %}
+  <!-- Scrape form (only shown if not already scraped) -->
+  <form method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="input-group mb-4">
+      {{ form.url(class="form-control", placeholder="Paste product URL") }}
+      <button type="submit" class="btn btn-outline-primary">Scrape</button>
+    </div>
+  </form>
+  {% endif %}
+
+  {% if data %}
+  <div class="scraped-data-card fade-in mb-4">
+    <div class="row g-0">
+      <div class="col-md-4 text-center p-3">
+        {% if data.image_url %}
+        <img src="{{ data.image_url }}" alt="Product Image" class="product-image rounded shadow-sm" />
+        {% endif %}
+      </div>
+      <div class="col-md-8 p-4">
+        <h3 class="product-title">{{ data.title }}</h3>
+  
+        {% if data.price %}
+        <p class="product-info">
+          <i class="bi bi-tag-fill text-success me-2"></i>
+          <strong>Price:</strong> ₹{{ data.price }}
+        </p>
+        {% endif %}
+  
+        {% if data.brand %}
+        <p class="product-info">
+          <i class="bi bi-building text-warning me-2"></i>
+          <strong>Brand:</strong> {{ data.brand }}
+        </p>
+        {% endif %}
+  
+        {% if data.rating %}
+        <p class="product-info">
+          <i class="bi bi-star-fill text-warning me-2"></i>
+          <strong>Rating:</strong> {{ data.rating }}
+        </p>
+        {% endif %}
+  
+        {% if data.review_count %}
+        <p class="product-info">
+          <i class="bi bi-chat-dots text-info me-2"></i>
+          <strong>Reviews:</strong> {{ data.review_count }}
+        </p>
+        {% endif %}
+  
+        {% if data.availability %}
+        <p class="product-info">
+          <i class="bi bi-box-seam me-2"></i>
+          <strong>Availability:</strong> {{ data.availability }}
+        </p>
+        {% endif %}
+  
+        {% if data.breadcrumbs %}
+        <p class="product-info">
+          <i class="bi bi-diagram-3 text-secondary me-2"></i>
+          <strong>Category:</strong> {{ data.breadcrumbs | join(" > ") }}
+        </p>
+        {% endif %}
+  
+        {% if data.description %}
+        <p class="product-info">
+          <i class="bi bi-info-circle me-2"></i>
+          <strong>Description:</strong> {{ data.description }}
+        </p>
+        {% endif %}
+  
+        {% if data.bullet_points %}
+        <div class="product-info">
+          <p class="mb-1"><strong><i class="bi bi-lightning me-2 text-primary"></i>Highlights:</strong></p>
+          <ul class="highlight-list ps-3">
+            {% for point in data.bullet_points %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if scrape_history %}
+  <h5 class="mt-4 mb-2 text-secondary">Scrape History</h5>
+  <!-- Scrollable Horizontal History -->
+  <div class="scrollable-history mb-3 d-flex overflow-auto">
+    {% for entry in scrape_history %}
+    <div class="card me-2 shadow-sm compact-history-entry">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <a href="{{ url_for('scrape', history_index=loop.index0) }}" class="history-link text-decoration-none text-primary">
+          {{ entry.title[:60] }}
+        </a>
+        <form method="POST" action="{{ url_for('delete_scrape_entry', index=loop.index0) }}"
+              onsubmit="return confirm('Delete this entry?')" class="ms-2">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">❌</button>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Clear All Button -->
+  <div class="d-flex justify-content-end mb-4">
+    <form method="POST" action="{{ url_for('delete_scrape_history') }}"
+          onsubmit="return confirm('Clear entire scrape history?')">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <button type="submit" class="btn btn-sm btn-danger">🗑️ Clear All</button>
+    </form>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

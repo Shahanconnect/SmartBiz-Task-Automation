@@ -1,0 +1,93 @@
+/* Background gradient animation */
+body {
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container center alignment */
+.login-page .container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* Card styling */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 1s ease;
+  color: #333;
+}
+
+/* Entrance animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form fields */
+.form-control {
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 0 0.2rem rgba(42, 82, 152, 0.25);
+}
+
+/* Button hover animation */
+.btn-primary {
+  background-color: #2a5298;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e3c72;
+  transform: translateY(-2px);
+}
+
+/* Link styles */
+a.text-primary {
+  transition: color 0.3s ease;
+}
+
+a.text-primary:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* Text enhancements */
+.fw-bold {
+  font-weight: 700 !important;
+}
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .card {
+    padding: 2rem 1rem;
+  }
+}

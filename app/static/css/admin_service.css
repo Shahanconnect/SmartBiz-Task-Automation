@@ -1,0 +1,107 @@
+/* === Search Bar === */
+#userSearch {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#userSearch:focus {
+    border-color: #0d6efd;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* === Table Styling === */
+#userTable {
+    width: 100%;
+    font-size: 0.93rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#userTable thead {
+    background: linear-gradient(90deg, #0d6efd 0%, #0a58ca 100%);
+    color: white;
+}
+
+#userTable th, #userTable td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Rounded header corners */
+#userTable thead th:first-child {
+    border-top-left-radius: 8px;
+}
+#userTable thead th:last-child {
+    border-top-right-radius: 8px;
+}
+
+/* Table row hover effect */
+#userTable tbody tr {
+    transition: background-color 0.2s ease;
+}
+#userTable tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* === Buttons === */
+.btn-sm {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* Service toggle buttons */
+.btn-success {
+    background: linear-gradient(to right, #28a745, #218838);
+    border: none;
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(to right, #218838, #1e7e34);
+}
+
+.btn-danger {
+    background: linear-gradient(to right, #dc3545, #c82333);
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(to right, #c82333, #bd2130);
+}
+
+.btn-secondary {
+    background-color: #adb5bd;
+    border: none;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* All On/Off buttons in headers */
+th form {
+    margin-top: 5px;
+}
+
+th form .btn {
+    width: 75px;
+    font-size: 0.72rem;
+    margin-bottom: 2px;
+    padding: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}

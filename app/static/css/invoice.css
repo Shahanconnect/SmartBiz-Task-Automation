@@ -1,0 +1,155 @@
+/* ========== GENERAL LAYOUT ========== */
+body {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+}
+
+form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem 2.5rem;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* ========== LABELS & INPUTS ========== */
+.form-label {
+  font-weight: 600;
+  color: #343a40;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2);
+}
+
+/* ========== TABLE STYLING ========== */
+.table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+th {
+  background-color: #f1f3f5;
+  color: #495057;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+td input {
+  text-align: center;
+}
+
+/* ========== BUTTONS ========== */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* ========== TOTAL SECTION ========== */
+.text-end h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #198754;
+}
+
+/* ========== PRINT BUTTON ========== */
+@media print {
+  /* Hide everything by default */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Show only the invoice card and its contents */
+  .card, .card * {
+    visibility: visible;
+  }
+
+  /* Hide header, footer, nav, and sidebar from base.html */
+  header, footer, nav, .navbar, .sidebar, .topbar {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Clean layout */
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide print button and back link */
+  .btn, .text-center.mt-4 {
+    display: none !important;
+  }
+
+  /* Remove background and extra spacing */
+  body {
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}

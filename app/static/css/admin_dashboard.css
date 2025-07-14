@@ -1,0 +1,114 @@
+/* Reset spacing */
+body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section spacing */
+.container {
+    padding-bottom: 4rem;
+}
+
+/* Card layout */
+.card {
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Dashboard Title */
+h1, h3 {
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Glass-style module cards */
+.glass-card {
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Headings */
+.glass-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.glass-card p {
+    font-size: 0.9rem;
+}
+
+/* Icon styling */
+.icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Gradient backgrounds */
+.gradient-blue {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.gradient-yellow {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+.gradient-teal {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.gradient-dark {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
+/* Button overrides */
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-warning,
+.btn-outline-dark,
+.btn-outline-teal {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-warning:hover,
+.btn-outline-dark:hover,
+.btn-outline-teal:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* Responsive padding */
+@media (max-width: 767px) {
+    .glass-card {
+        padding: 1.5rem;
+    }
+    .icon {
+        font-size: 1.5rem;
+    }
+    .glass-card h5 {
+        font-size: 1rem;
+    }
+}

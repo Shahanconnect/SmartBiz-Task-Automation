@@ -1,0 +1,21 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# VSCode
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Mac/Linux junk
+.DS_Store
+
+# Migrations cache
+instance/
