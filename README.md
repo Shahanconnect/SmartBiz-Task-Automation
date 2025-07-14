@@ -111,7 +111,7 @@ SmartBiz/
 
 ### 🔹 Admin Dashboard
 
-![admin-dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png)
+![admin-dashboard]([https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png](https://github.com/Shahanconnect/SmartBiz-Task-Automation/blob/1b7451bea0c6ac12fde0732481bbd14b62804a2a/app/screenshots/admin-dashboard.png))
 
 ### 🔹 User Profile
 
