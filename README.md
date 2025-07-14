@@ -131,4 +131,4 @@ Screenshots-
 ![system-controller](app/screenshots/system-controller.png)
 
 ### 🔹 User Management
-![user-management](app/screenshots/user-management.png)
+[user-management](app/screenshots/user-management.png)
