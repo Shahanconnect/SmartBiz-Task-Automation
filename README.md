@@ -1,36 +1,31 @@
 # SmartBiz Task Automation 🧠⚙️
 
-**SmartBiz Task Automation** is a Python-powered web platform that simplifies essential business operations.
-It provides tools like AI product description generation, price tracking, smart scraping, invoice generation, and OS-level system utilities — all accessible through a clean dashboard with user/admin roles.
+SmartBiz Task Automation is a Python-powered web platform designed to streamline critical business operations through a unified dashboard. It integrates multiple tools including AI-assisted product description generation, dynamic price tracking, web scraping, professional invoice creation, and OS-level utilities.
 
 ---
 
 ## 🚀 Features
 
-* 🤖 AI-Powered Product Description Generator *(LLM Integrated via TinyLLaMA)*
-* 📉 E-commerce Price Alert Notifier
-* 🌐 Smart Web Scraper (Playwright/Selenium)
-* 🧾 Professional Invoice Generator
-* 🖥️ OS-Level Task Controller *(browser, system info, shutdown, etc.)*
-* 🔐 Secure User Authentication
-* 🧑‍💼 Admin Dashboard with Role Management *(User/Admin)*
-* 📄 SQLite / MySQL Database Integration
-
----
-
-## 📸 [Jump to Screenshots ↓](#-screenshots)
+* AI-based Product Description Generator (TinyLLaMA via Ollama)
+* E-commerce Price Alert Notification System
+* Smart Web Scraper using Playwright
+* Invoice Generator with PDF support
+* OS-Level Task Controller (browser, system info, restart, shutdown)
+* Secure Authentication with Role-based Access (User/Admin)
+* Admin Dashboard for Service, User, and Role Management
+* Persistent storage using MySQL or SQLite
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer     | Technology                             |
-| --------- | -------------------------------------- |
-| Backend   | Python, Flask, Flask-Login, Flask-WTF  |
-| Frontend  | HTML5, CSS3, Bootstrap 5, Jinja2       |
-| Database  | MySQL / SQLite, SQLAlchemy ORM         |
-| Scraping  | Playwright (headless scraping)         |
-| AI Engine | TinyLLaMA via Ollama (LLM integration) |
+| Layer     | Technology                            |
+| --------- | ------------------------------------- |
+| Backend   | Python, Flask, Flask-Login, Flask-WTF |
+| Frontend  | HTML5, CSS3, Bootstrap 5, Jinja2      |
+| Database  | MySQL / SQLite, SQLAlchemy ORM        |
+| Scraping  | Playwright (headless scraping)        |
+| AI Engine | TinyLLaMA (locally hosted via Ollama) |
 
 ---
 
@@ -54,41 +49,28 @@ SmartBiz/
 
 ---
 
-## 🔧 Installation & Setup
+## 🔧 Installation
 
-1. **Clone the Repository**
+```bash
+# Clone the repository
+git clone https://github.com/shahanconnect/Smartbiz.git
+cd Smartbiz
 
-   ```bash
-   git clone https://github.com/shahanconnect/Smartbiz.git
-   cd Smartbiz
-   ```
+# Create virtual environment
+python -m venv venv
+venv\Scripts\activate  # On Windows
 
-2. **Set Up Virtual Environment**
+# Install required packages
+pip install -r requirements.txt
 
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate  # (For Windows)
-   ```
+# Set up the database
+flask db init
+flask db migrate -m "Initial"
+flask db upgrade
 
-3. **Install Dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Set Up Database (MySQL / SQLite)**
-
-   ```bash
-   flask db init
-   flask db migrate -m "Initial"
-   flask db upgrade
-   ```
-
-5. **Run the App**
-
-   ```bash
-   python run.py
-   ```
+# Start the application
+python run.py
+```
 
 ---
 
@@ -96,78 +78,78 @@ SmartBiz/
 
 ### 🔹 Homepage
 
-![homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
-![homepage-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage2.png)
+![Homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
+![Homepage 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage2.png)
 
 ### 🔹 Signup & Login
 
-![signup](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/signup.png)
-![login](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/login.png)
+![Signup](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/signup.png)
+![Login](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/login.png)
 
 ### 🔹 User Dashboard
 
-![user-dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user.png)
-![user-dashboard-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/dashboard.png)
+![User Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user.png)
+![User Dashboard 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/dashboard.png)
 
 ### 🔹 Admin Dashboard
 
-![admin-dashboard]([https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png](https://github.com/Shahanconnect/SmartBiz-Task-Automation/blob/1b7451bea0c6ac12fde0732481bbd14b62804a2a/app/screenshots/admin-dashboard.png))
+![Admin Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png)
 
 ### 🔹 User Profile
 
-![user-profile](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-profile.png)
+![User Profile](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-profile.png)
 
 ### 🔹 Product Description Generator
 
-![description](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/description.png)
+![Description](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/description.png)
 
 ### 🔹 Invoice Generator
 
-![invoice](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice.png)
-![invoice2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice2.png)
+![Invoice](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice.png)
+![Invoice 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice2.png)
 
 ### 🔹 E-commerce Scraper
 
-![scraper](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper.png)
-![scraper-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper2.png)
+![Scraper](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper.png)
+![Scraper 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper2.png)
 
 ### 🔹 Price Alert Notifier
 
-![price-alert](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/price-alert.png)
+![Price Alert](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/price-alert.png)
 
 ### 🔹 Service Management
 
-![service-management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/service-management.png)
+![Service Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/service-management.png)
 
 ### 🔹 System Controller
 
-![system-controller](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/system-controller.png)
+![System Controller](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/system-controller.png)
 
 ### 🔹 User Management
 
-![user-management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-management.png)
+![User Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-management.png)
 
 ---
 
-## 🙋‍♂️ Author
+## 👨‍💻 Developer
 
-**Shahan Ahmad**
-📌 GitHub: [@shahanconnect](https://github.com/shahanconnect)
+Shahan Ahmad
+GitHub: [@shahanconnect](https://github.com/shahanconnect)
 
 ---
 
-## 📚 License
+## 📄 License
 
-You can add one of these licenses (recommended for open-source):
-
-* [MIT License](https://choosealicense.com/licenses/mit/)
-* [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
-* [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
-
-To add a license:
+This project is open-source. To add a license:
 
 ```bash
 touch LICENSE
 ```
 
-Paste the license text from the site above and commit.
+Choose one of the following:
+
+* [MIT License](https://choosealicense.com/licenses/mit/)
+* [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
+* [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+
+Paste the license text inside the LICENSE file and commit it to the repository.
