@@ -78,37 +78,56 @@ python run.py
 
 ### 🔹 Homepage
 
-&#x20;
+![Homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
+![Homepage 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage2.png)
 
 ### 🔹 Signup & Login
 
-&#x20;
+![Signup](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/signup.png)
+![Login](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/login.png)
 
 ### 🔹 User Dashboard
 
-&#x20;
+![User Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user.png)
+![User Dashboard 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/dashboard.png)
 
 ### 🔹 Admin Dashboard
 
+![Admin Dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png)
+
 ### 🔹 User Profile
+
+![User Profile](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-profile.png)
 
 ### 🔹 Product Description Generator
 
+![Description](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/description.png)
+
 ### 🔹 Invoice Generator
 
-&#x20;
+![Invoice](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice.png)
+![Invoice 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice2.png)
 
 ### 🔹 E-commerce Scraper
 
-&#x20;
+![Scraper](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper.png)
+![Scraper 2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper2.png)
 
 ### 🔹 Price Alert Notifier
 
+![Price Alert](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/price-alert.png)
+
 ### 🔹 Service Management
+
+![Service Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/service-management.png)
 
 ### 🔹 System Controller
 
+![System Controller](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/system-controller.png)
+
 ### 🔹 User Management
+
+![User Management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-management.png)
 
 ---
 
