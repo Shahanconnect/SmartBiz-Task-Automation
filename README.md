@@ -93,42 +93,42 @@ Screenshots-
 ## 📸 Screenshots
 
 ### 🔹 Homepage
-![Homepage](app/screenshots/homepage.png)
-![Homepage 2](app/screenshots/homepage2.png)
+![homepage](app/screenshots/homepage.png)
+![homepage-2](app/screenshots/homepage2.png)
 
 ### 🔹 Signup & Login
-![Signup Page](app/screenshots/signup.png)
-![Login Page](app/screenshots/login.png)
+![signup](app/screenshots/signup.png)
+![login](app/screenshots/login.png)
 
 ### 🔹 User Dashboard
-![User Dashboard](app/screenshots/user.png)
-![User Dashboard 2](app/screenshots/dashboard.png)
+![user-dashboard](app/screenshots/user.png)
+![user-dashboard-2](app/screenshots/dashboard.png)
 
 ### 🔹 Admin Dashboard
-![Admin Dashboard](app/screenshots/admin-dashboard.png)
+![admin-dashboard](app/screenshots/admin-dashboard.png)
 
 ### 🔹 User Profile
-![User Profile](app/screenshots/user-profile.png)
+![user-profile](app/screenshots/user-profile.png)
 
 ### 🔹 Product Description Generator
-![Description Generator](app/screenshots/description.png)
+![description](app/screenshots/description.png)
 
 ### 🔹 Invoice Generator
-![Invoice](app/screenshots/invoice.png)
-![Invoice Preview](app/screenshots/invoice2.png)
+![invoice](app/screenshots/invoice.png)
+![invoice2](app/screenshots/invoice2.png)
 
 ### 🔹 E-commerce Scraper
-![Scraper](app/screenshots/scraper.png)
-![Scraper Page 2](app/screenshots/scraper2.png)
+![scraper](app/screenshots/scraper.png)
+![scraper-2](app/screenshots/scraper2.png)
 
 ### 🔹 Price Alert Notifier
-![Price Alert](app/screenshots/price-alert.png)
+![price-alert](app/screenshots/price-alert.png)
 
 ### 🔹 Service Management
-![Service Management](app/screenshots/service-management.png)
+![service-management](app/screenshots/service-management.png)
 
 ### 🔹 System Controller
-![System Controller](app/screenshots/system-controller.png)
+![system-controller](app/screenshots/system-controller.png)
 
 ### 🔹 User Management
-![User Management](app/screenshots/user-management.png)
+![user-management](app/screenshots/user-management.png)
