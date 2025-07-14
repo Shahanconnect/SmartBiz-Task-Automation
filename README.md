@@ -87,51 +87,45 @@ GitHub: @shahanconnect
 
 
 
-
-Screenshots-
-
 ## 📸 Screenshots
 
 ### 🔹 Homepage
-![homepage](app/screenshots/homepage.png)
-![homepage-2](app/screenshots/homepage2.png)
+![homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
+![homepage-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage2.png)
 
 ### 🔹 Signup & Login
-![signup](app/screenshots/signup.png)
-![login](app/screenshots/login.png)
+![signup](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/signup.png)
+![login](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/login.png)
 
 ### 🔹 User Dashboard
-![user-dashboard](app/screenshots/user.png)
-![user-dashboard-2](app/screenshots/dashboard.png)
+![user-dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user.png)
+![user-dashboard-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/dashboard.png)
 
 ### 🔹 Admin Dashboard
-![admin-dashboard](app/screenshots/admin-dashboard.png)
+![admin-dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png)
 
 ### 🔹 User Profile
-![user-profile](app/screenshots/user-profile.png)
+![user-profile](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-profile.png)
 
 ### 🔹 Product Description Generator
-![description](app/screenshots/description.png)
+![description](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/description.png)
 
 ### 🔹 Invoice Generator
-![invoice](app/screenshots/invoice.png)
-![invoice2](app/screenshots/invoice2.png)
+![invoice](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice.png)
+![invoice2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice2.png)
 
 ### 🔹 E-commerce Scraper
-![scraper](app/screenshots/scraper.png)
-![scraper-2](app/screenshots/scraper2.png)
+![scraper](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper.png)
+![scraper-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper2.png)
 
 ### 🔹 Price Alert Notifier
-![price-alert](app/screenshots/price-alert.png)
+![price-alert](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/price-alert.png)
 
 ### 🔹 Service Management
-![service-management](app/screenshots/service-management.png)
+![service-management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/service-management.png)
 
 ### 🔹 System Controller
-![system-controller](app/screenshots/system-controller.png)
+![system-controller](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/system-controller.png)
 
 ### 🔹 User Management
-[user-management](app/screenshots/user-management.png)
-
-
-![Test Image](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
+![user-management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-management.png)
