@@ -1,10 +1,10 @@
-# SmartBiz Task Automation 🧠⚙️
+# SmartBiz Task Automation 
 
 SmartBiz Task Automation is a Python-powered web platform designed to streamline critical business operations through a unified dashboard. It integrates multiple tools including AI-assisted product description generation, dynamic price tracking, web scraping, professional invoice creation, and OS-level utilities.
 
 ---
 
-## 🚀 Features
+##  Features
 
 * AI-based Product Description Generator (TinyLLaMA via Ollama)
 * E-commerce Price Alert Notification System
@@ -13,11 +13,11 @@ SmartBiz Task Automation is a Python-powered web platform designed to streamline
 * OS-Level Task Controller (browser, system info, restart, shutdown)
 * Secure Authentication with Role-based Access (User/Admin)
 * Admin Dashboard for Service, User, and Role Management
-* Persistent storage using MySQL or SQLite
+* Persistent storage using MySQL 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer     | Technology                            |
 | --------- | ------------------------------------- |
@@ -29,7 +29,7 @@ SmartBiz Task Automation is a Python-powered web platform designed to streamline
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 SmartBiz/
