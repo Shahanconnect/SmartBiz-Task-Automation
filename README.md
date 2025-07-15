@@ -1,131 +1,156 @@
 # SmartBiz Task Automation 🧠⚙️
 
-**SmartBiz Task Automation** is a Python-powered web platform that simplifies essential business operations. It offers tools for AI-based product description generation, price tracking, web scraping, invoice generation, and system task management — all accessible via a clean  dashboard.
+SmartBiz Task Automation is a Python-powered web platform designed to streamline critical business operations through a unified dashboard. It integrates multiple tools including AI-assisted product description generation, dynamic price tracking, web scraping, professional invoice creation, and OS-level utilities.
 
 ---
 
 ## 🚀 Features
 
--  AI-Powered Product Description Generator (LLM Integrated)
--  E-commerce Price Alert Notifier
--  Smart Web Scraper (Playwright/Selenium)
--  Professional Invoice Generator
--  OS-Level Task Controller (open browser, system info, etc.)
--  Secure User Authentication
--  Admin Dashboard with Role Management (User/Admin)
--  SQLite/MySQL database integration
+* AI-based Product Description Generator (TinyLLaMA via Ollama)
+* E-commerce Price Alert Notification System
+* Smart Web Scraper using Playwright
+* Invoice Generator with PDF support
+* OS-Level Task Controller (browser, system info, restart, shutdown)
+* Secure Authentication with Role-based Access (User/Admin)
+* Admin Dashboard for Service, User, and Role Management
+* Persistent storage using MySQL or SQLite
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer       | Technology                     
-
-| Backend     | Python, Flask, Flask-Login      
-| Frontend    | HTML5, CSS3, Bootstrap, Jinja2  
-| Database    | MySQL, SQLAlchemy ORM  
-| Forms       | Flask-WTF             
-| Scraping    | Playwright           
-| AI Engine   | TinyLLaMA 
-
+| Layer     | Technology                            |
+| --------- | ------------------------------------- |
+| Backend   | Python, Flask, Flask-Login, Flask-WTF |
+| Frontend  | HTML5, CSS3, Bootstrap 5, Jinja2      |
+| Database  | MySQL / SQLite, SQLAlchemy ORM        |
+| Scraping  | Playwright (headless scraping)        |
+| AI Engine | TinyLLaMA (locally hosted via Ollama) |
 
 ---
 
-## 🖥️ Project Structure
+## 🗂️ Project Structure
 
-
+```
 SmartBiz/
 ├── app/
-│ ├── templates/
-│ ├── static/
-│ ├── routes.py
-│ ├── forms/
-│ ├── services/
-│ └── init.py
+│   ├── templates/
+│   ├── static/
+│   ├── forms/
+│   ├── services/
+│   ├── routes.py
+│   └── __init__.py
 ├── models/
 ├── database/
-├── README.md
 ├── requirements.txt
+├── README.md
 └── run.py
-
+```
 
 ---
 
-## 🔧 Installation & Setup
-
-Download and setup python 3.x , mysql , tinyllama(ollama)  , playwright
-
-### 1. Clone the repository
+## 🔧 Installation
 
 ```bash
-git clone https://github.com/yourusername/smartbiz-task-automation.git
-cd smartbiz-task-automation
+# Clone the repository
+git clone https://github.com/shahanconnect/SmartBiz-Task-Automation.git
+cd SmartBiz-Task-Automation
 
-## 2.
-
+# Create virtual environment
 python -m venv venv
-venv\Scripts\activate  # Windows
+venv\Scripts\activate  # On Windows
 
-#3. Install dependencies
-
+# Install required packages
 pip install -r requirements.txt
 
-
-#4 setup the database 
+# Set up the database
 flask db init
 flask db migrate -m "Initial"
 flask db upgrade
 
-
-#5 run the app
+# Start the application
 python run.py
+```
 
-
-🙋‍♂️ Author
-Shahan Ahmad
-GitHub: @shahanconnect
-
-
+---
 
 ## 📸 Screenshots
 
 ### 🔹 Homepage
-![homepage](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage.png)
-![homepage-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/homepage2.png)
+
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/homepage.png" width="600" style="margin-bottom: 10px;">
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/homepage2.png" width="600" style="margin-bottom: 10px;">
 
 ### 🔹 Signup & Login
-![signup](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/signup.png)
-![login](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/login.png)
+
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/signup.png" width="600" style="margin-bottom: 10px;">
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/login.png" width="600" style="margin-bottom: 10px;">
 
 ### 🔹 User Dashboard
-![user-dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user.png)
-![user-dashboard-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/dashboard.png)
 
-### 🔹 Admin Dashboard
-![admin-dashboard](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/admin-dashboard.png)
-
-### 🔹 User Profile
-![user-profile](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-profile.png)
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/user.png" width="600" style="margin-bottom: 10px;">
 
 ### 🔹 Product Description Generator
-![description](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/description.png)
 
-### 🔹 Invoice Generator
-![invoice](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice.png)
-![invoice2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/invoice2.png)
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/description.png" width="600" style="margin-bottom: 10px;">
 
 ### 🔹 E-commerce Scraper
-![scraper](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper.png)
-![scraper-2](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/scraper2.png)
+
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/scraper.png" width="600" style="margin-bottom: 10px;">
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/scraper2.png" width="600" style="margin-bottom: 10px;">
 
 ### 🔹 Price Alert Notifier
-![price-alert](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/price-alert.png)
 
-### 🔹 Service Management
-![service-management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/service-management.png)
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/price-alert.png" width="600" style="margin-bottom: 10px;">
 
-### 🔹 System Controller
-![system-controller](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/system-controller.png)
+### 🔹 Invoice Generator
+
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/invoice.png" width="600" style="margin-bottom: 10px;">
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/invoice2.png" width="600" style="margin-bottom: 10px;">
+
+### 🔹 Admin Dashboard
+
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/admin-dashboard.png" width="600" style="margin-bottom: 10px;">
 
 ### 🔹 User Management
-![user-management](https://raw.githubusercontent.com/shahanconnect/Smartbiz/main/app/screenshots/user-management.png)
+
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/user-management.png" width="600" style="margin-bottom: 10px;">
+
+### 🔹 Service Management
+
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/service-management.png" width="600" style="margin-bottom: 10px;">
+
+---
+
+## 👨‍💻 Developer
+
+Shahan Ahmad
+GitHub: [@shahanconnect](https://github.com/shahanconnect)
+
+---
+
+## 📄 License
+
+```
+Copyright (c) 2025 Shahan Ahmad
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
