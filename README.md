@@ -88,7 +88,7 @@ python run.py
 
 ### 🔹 User Dashboard
 
-<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/user.png" width="600" style="margin-bottom: 10px;">
+<img src="https://raw.githubusercontent.com/shahanconnect/SmartBiz-Task-Automation/main/app/screenshots/user-dashboard.png" width="600" style="margin-bottom: 10px;">
 
 ### 🔹 Product Description Generator
 
