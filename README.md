@@ -23,7 +23,7 @@ SmartBiz Task Automation is a Python-powered web platform designed to streamline
 | --------- | ------------------------------------- |
 | Backend   | Python, Flask, Flask-Login, Flask-WTF |
 | Frontend  | HTML5, CSS3, Bootstrap 5, Jinja2      |
-| Database  | MySQL / SQLite, SQLAlchemy ORM        |
+| Database  | MySQL , SQLAlchemy ORM        |
 | Scraping  | Playwright (headless scraping)        |
 | AI Engine | TinyLLaMA (locally hosted via Ollama) |
 
