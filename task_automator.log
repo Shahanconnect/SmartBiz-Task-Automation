@@ -1,0 +1,43 @@
+2025-04-16 17:56:48,269 - INFO - Task Automator initialized at 2025-04-16 17:56:48.269073
+2025-04-16 17:56:48,340 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 17:56:48,341 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 17:56:48,343 - INFO -  * Restarting with stat
+2025-04-16 17:56:51,510 - INFO - Task Automator initialized at 2025-04-16 17:56:51.510162
+2025-04-16 17:56:51,573 - WARNING -  * Debugger is active!
+2025-04-16 17:56:51,579 - INFO -  * Debugger PIN: 964-926-303
+2025-04-16 17:57:02,151 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:02] "GET /user-dashboard HTTP/1.1" 200 -
+2025-04-16 17:57:05,186 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:05] "GET / HTTP/1.1" 200 -
+2025-04-16 17:57:05,253 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:05] "[33mGET /static/img/dashboard_preview.png HTTP/1.1[0m" 404 -
+2025-04-16 17:57:05,481 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:05] "[36mGET /static/css/user_dashboard.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:05,486 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:05,490 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-16 17:57:07,683 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:07] "GET /login HTTP/1.1" 200 -
+2025-04-16 17:57:07,753 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:07,763 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:07] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:07,771 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:07] "[36mGET /static/css/user_dashboard.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:07,777 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-16 17:57:17,127 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-04-16 17:57:17,136 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:17] "GET /user-dashboard HTTP/1.1" 200 -
+2025-04-16 17:57:17,181 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:17,199 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:17] "[36mGET /static/css/user_dashboard.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:17,200 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-16 17:57:21,569 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:21] "GET /product-description HTTP/1.1" 200 -
+2025-04-16 17:57:21,600 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:21,627 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-16 17:57:21,628 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:21] "[36mGET /static/css/user_dashboard.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:26,153 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:26] "[35m[1mGET /scraper HTTP/1.1[0m" 500 -
+2025-04-16 17:57:26,183 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:26] "[36mGET /scraper?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:26,194 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:26] "[36mGET /scraper?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-16 17:57:26,214 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:26] "GET /scraper?__debugger__=yes&cmd=resource&f=console.png&s=GW9Y67rS6HvkYzvceqc9 HTTP/1.1" 200 -
+2025-04-16 17:57:26,355 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:26] "[36mGET /scraper?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-16 17:57:29,637 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:29] "GET /task-automator/task-automator/run HTTP/1.1" 200 -
+2025-04-16 17:57:29,700 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:29,712 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:29] "[36mGET /static/css/task_automator.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:29,713 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:29] "[36mGET /static/css/user_dashboard.css HTTP/1.1[0m" 304 -
+2025-04-16 17:57:29,719 - INFO - 127.0.0.1 - - [16/Apr/2025 17:57:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-16 17:58:30,665 - INFO -  * Detected change in 'C:\\Users\\Dell\\SmartBiz\\app\\services\\task_automator_service.py', reloading
+2025-04-16 17:58:30,995 - INFO -  * Restarting with stat
+2025-04-16 18:00:07,142 - INFO -  * Restarting with stat
+2025-04-16 18:00:14,233 - INFO -  * Restarting with stat
+2025-04-16 18:03:41,673 - INFO -  * Restarting with stat

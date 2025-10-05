@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Step 2: Set Your Target Price</h2>
+  <p><strong>Product:</strong> {{ product.name }}</p>
+  <p><strong>Current Price:</strong> {{ product.price_text }}</p>
+  <form method="POST" action="{{ url_for('confirm_price_alert') }}">
+    <div class="mb-3">
+      <label for="target_price" class="form-label">Target Price</label>
+      <input type="number" class="form-control" name="target_price" required step="0.01">
+    </div>
+    <button type="submit" class="btn btn-success">Check and Notify</button>
+  </form>
+</div>
+{% endblock %}

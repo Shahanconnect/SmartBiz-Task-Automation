@@ -1,107 +1,129 @@
-/* === Search Bar === */
+/* ===============================
+   Service Management Styles
+   =============================== */
+
+/* Page Container */
+.container {
+  background: #f9fafe;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease;
+}
+
+/* Page Title */
+h2 {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Search Bar */
 #userSearch {
-    padding: 10px 14px;
-    font-size: 0.95rem;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    transition: all 0.25s ease;
-    background-color: #f8f9fa;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 10px 14px;
+  transition: all 0.3s;
 }
 
 #userSearch:focus {
-    border-color: #0d6efd;
-    background-color: #fff;
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
 }
 
-/* === Table Styling === */
-#userTable {
-    width: 100%;
-    font-size: 0.93rem;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    overflow: hidden;
+/* Table Styling */
+.table {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
 }
 
-#userTable thead {
-    background: linear-gradient(90deg, #0d6efd 0%, #0a58ca 100%);
-    color: white;
+/* Table Header */
+.table-dark {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-#userTable th, #userTable td {
-    text-align: center;
-    vertical-align: middle;
-    padding: 12px 10px;
-    border-bottom: 1px solid #dee2e6;
+.table thead th {
+  vertical-align: middle;
+  padding: 14px;
+  font-size: 0.9rem;
 }
 
-/* Rounded header corners */
-#userTable thead th:first-child {
-    border-top-left-radius: 8px;
-}
-#userTable thead th:last-child {
-    border-top-right-radius: 8px;
-}
-
-/* Table row hover effect */
-#userTable tbody tr {
-    transition: background-color 0.2s ease;
-}
-#userTable tbody tr:hover {
-    background-color: #f0f4f8;
+/* Table Rows */
+.table tbody td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-/* === Buttons === */
+.table tbody tr:hover {
+  background: #f0f6ff;
+  transition: background 0.3s ease;
+}
+
+/* Buttons */
 .btn-sm {
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 80px;
 }
 
-/* Service toggle buttons */
+.btn-sm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 .btn-success {
-    background: linear-gradient(to right, #28a745, #218838);
-    border: none;
-    color: white;
-}
-
-.btn-success:hover {
-    background: linear-gradient(to right, #218838, #1e7e34);
+  background: linear-gradient(90deg, #28a745, #218838);
+  border: none;
 }
 
 .btn-danger {
-    background: linear-gradient(to right, #dc3545, #c82333);
-    border: none;
-    color: white;
-}
-
-.btn-danger:hover {
-    background: linear-gradient(to right, #c82333, #bd2130);
+  background: linear-gradient(90deg, #dc3545, #b02a37);
+  border: none;
 }
 
 .btn-secondary {
-    background-color: #adb5bd;
-    border: none;
-    color: white;
-    cursor: not-allowed;
+  background: linear-gradient(90deg, #6c757d, #545b62);
+  border: none;
 }
 
-/* All On/Off buttons in headers */
-th form {
-    margin-top: 5px;
+/* Locked Button */
+.btn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
-th form .btn {
-    width: 75px;
-    font-size: 0.72rem;
-    margin-bottom: 2px;
-    padding: 5px 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #userSearch {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  .table thead th {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .btn-sm {
+    min-width: auto;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
 }

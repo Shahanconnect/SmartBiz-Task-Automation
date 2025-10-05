@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3">Scraped Products</h2>
+    {% if scraped_products %}
+        <ul class="list-group">
+            {% for product in scraped_products %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>{{ product.name }}</strong><br>
+                        {{ product.price }}<br>
+                        <a href="{{ product.url }}" target="_blank">{{ product.url }}</a>
+                    </div>
+                    <form action="{{ url_for('data_organizer.delete_product', index=loop.index0) }}" method="POST">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <form action="{{ url_for('data_organizer.clear_all_products') }}" method="POST" class="mt-3">
+            <button type="submit" class="btn btn-warning">Clear All</button>
+        </form>
+    {% else %}
+        <p>No products found. Scrape some first!</p>
+    {% endif %}
+</div>
+{% endblock %}

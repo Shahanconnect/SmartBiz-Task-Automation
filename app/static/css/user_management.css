@@ -1,76 +1,111 @@
 /* Container Styling */
 .user-management-container {
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: #f9f9fb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.user-management-container h2 {
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+/* Search Form */
+.user-management-container form input.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: 0.3s;
+}
+
+.user-management-container form input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.user-management-container form .btn {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+/* Table Styling */
+.user-table-wrapper {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.user-table-wrapper table {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Table Header */
+.user-table-wrapper thead {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #ffffff;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-table-wrapper th {
+  padding: 14px;
+  text-align: center;
+}
+
+/* Table Body */
+.user-table-wrapper td {
+  padding: 12px;
+  vertical-align: middle;
+  text-align: center;
+  color: #333;
+}
+
+.user-table-wrapper tbody tr:hover {
+  background-color: #f1f5ff;
+  transition: background 0.3s ease;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.btn-sm {
+  border-radius: 6px;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  transition: 0.3s;
+}
+
+.btn-sm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Special "Primary Admin" Label */
+.text-muted {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .user-management-container form {
+    flex-direction: column;
   }
   
-  /* Form and Button Styling */
-  .user-management-container .form-control {
-    min-width: 200px;
+  .user-management-container form input,
+  .user-management-container form button,
+  .user-management-container form a {
+    width: 100%;
   }
-  
-  .user-management-container .btn {
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  
-  .user-management-container .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .user-management-container .btn-secondary:hover {
-    background-color: #6c757d;
-    color: #fff;
-  }
-  
-  /* Table Styling */
-  .user-table-wrapper {
-    max-height: 70vh;
-    overflow-y: auto;
-    border-radius: 10px;
-    background: #fff;
-  }
-  
-  table thead th {
-    position: sticky;
-    top: 0;
-    background-color: #343a40;
-    color: white;
-    z-index: 2;
-  }
-  
-  table tbody tr:hover {
-    background-color: #f1f1f1;
-    transition: background 0.2s ease;
-  }
-  
-  table td, table th {
-    vertical-align: middle !important;
-    white-space: nowrap;
-  }
-  
-  /* Badge Styling */
-  .badge {
-    font-size: 0.85rem;
-    padding: 0.45em 0.65em;
-    border-radius: 20px;
-  }
-  
-  /* Responsive Buttons */
-  @media (max-width: 768px) {
-    .user-management-container .d-flex {
-      flex-direction: column !important;
-      align-items: stretch !important;
-    }
-  
-    .user-management-container .form-control {
-      width: 100%;
-      margin-bottom: 0.5rem;
-    }
-  
-    .user-management-container .btn {
-      width: 100%;
-    }
-  }
-  
+}

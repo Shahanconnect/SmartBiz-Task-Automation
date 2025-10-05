@@ -447,7 +447,7 @@ def register_routes(app):
         if current_user.is_admin:
 
         
-            return redirect(url_for('user_dashboard'))
+            return redirect(url_for('admin_dashboard'))
 
         search_query = request.args.get('search', '').strip()
         if search_query:
