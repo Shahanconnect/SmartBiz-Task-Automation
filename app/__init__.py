@@ -8,9 +8,10 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
+# Load .env file (for local development)
 load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / '.env')
 
-#  Initialize extensions
+# Initialize extensions
 db = SQLAlchemy()
 login_manager = LoginManager()
 csrf = CSRFProtect()
@@ -19,42 +20,64 @@ mail = Mail()
 def create_app():
     app = Flask(__name__)
 
-    #  Core configuration from .env
-    app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
+    # ==============================
+    # 🔐 SECRET KEY (Render compatible)
+    # ==============================
+    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'fallback-secret')
+
+    # ==============================
+    # 🗄️ DATABASE CONFIG (Render PostgreSQL fix)
+    # ==============================
+    uri = os.getenv("DATABASE_URL")
+
+    if uri and uri.startswith("postgres://"):
+        uri = uri.replace("postgres://", "postgresql://", 1)
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = uri
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    #  Flask-Mail configuration
+    # ==============================
+    # 📧 MAIL CONFIG
+    # ==============================
     app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
     app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
     app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'true').lower() == 'true'
     app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
     app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 
-
-
-    #  Initialize extensions
+    # ==============================
+    # 🔌 INIT EXTENSIONS
+    # ==============================
     db.init_app(app)
     login_manager.init_app(app)
     csrf.init_app(app)
     mail.init_app(app)
 
-    #  Inject CSRF token
+    # ==============================
+    # 🔐 CSRF TOKEN
+    # ==============================
     @app.context_processor
     def inject_csrf_token():
         return dict(csrf_token=generate_csrf())
 
-    #  User loader
+    # ==============================
+    # 👤 USER LOADER
+    # ==============================
     from app.models import User
+
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(int(user_id))
 
-    #  Register routes
+    # ==============================
+    # 🚏 ROUTES
+    # ==============================
     from app.routes import register_routes
     register_routes(app)
 
-    #  Create tables
+    # ==============================
+    # 🛠️ CREATE TABLES (FIRST RUN)
+    # ==============================
     with app.app_context():
         db.create_all()
 
