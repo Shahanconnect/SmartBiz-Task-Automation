@@ -12,3 +12,4 @@ schedule
 secure-smtplib
 Flask-Mail
 selenium
+gunicorn
